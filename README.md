@@ -32,6 +32,15 @@ npx expo start --tunnel
 
 Open the dev build app and connect to the project.
 
+4. Standalone build (no Metro required after install):
+
+```bash
+eas build --profile production --platform ios      # App Store/adhoc/internal
+eas build --profile production --platform android  # AAB; for a quick APK use --profile preview
+```
+
+Install from the EAS build page/store link. The JS bundle is embedded, so the app runs without your laptop once installed.
+
 ## Data backup
 
 Data lives locally in `workouts.db`. Use in-app export (Exercises/History) or copy the DB file from your device if you want a backup.
